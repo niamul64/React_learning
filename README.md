@@ -4,6 +4,6 @@
 #### '$npm help': show alo the command that i can use.
 <hr>
 
-## 1. create a NPM project: goto the folder and inside the folder: rest of the npm learing is: 
-$$ npm init
+## 1. create a NPM project(MyApp), see rest of the npm learing in: https://github.com/niamul64/React_learning/tree/main/MyApp
+
 
