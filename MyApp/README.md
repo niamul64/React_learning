@@ -1,6 +1,7 @@
 ## Note: if i have package.json file the i just need to run: [npm install] -> all dependencies will be installed.
 ### only package.json file is enough to send for dependencies.(but we have to use '--save' after every package install command)
 ### don't need to share the node_modules file.
+### import file, export file use another file's code: https://www.w3schools.com/react/tryit.asp?filename=tryreact_es6_module1
 <hr>
 
 #### node packages documentation: https://www.npmjs.com/package/date-format
@@ -44,7 +45,8 @@ $ npm update bootstrap
 
 ### 1. Come to the folder where we want to make node app or npm app. and type on terminal:
 $ npm init
-$
+// shortcut: initialize with deafult
+$ npm init --yes
 ```
 package name: (myapp)
 version: (1.0.0)
