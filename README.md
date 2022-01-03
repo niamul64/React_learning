@@ -6,6 +6,6 @@
 for more: https://developer.mozilla.org/en-US/docs/web/javascript/reference/statements/export
 <hr>
 
-## 1. create a NPM project(MyApp), see rest of the npm learing in: https://github.com/niamul64/React_learning/tree/main/MyApp
+## 1. create a NPM project(MyApp), see rest of the npm learing in: https://github.com/niamul64/React_learning/tree/main/NodeJs%20before%20react%20learning
 
 

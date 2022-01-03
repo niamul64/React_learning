@@ -72,4 +72,4 @@ $ npm install bootstrap --save
 <hr>
 
 # Now, use packages in js file: create a index.js
-### 1. Use date_format package.: follow documatation
+### 1. Use date_format package.: follow documatation for using the package
