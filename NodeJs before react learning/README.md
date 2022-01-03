@@ -1,8 +1,9 @@
 ## Note: if i have package.json file the i just need to run: [npm install] -> all dependencies will be installed.
 ### only package.json file is enough to send for dependencies.(but we have to use '--save' after every package install command)
 ### don't need to share the node_modules file.
-### import file, export file use another file's code: https://www.w3schools.com/react/tryit.asp?filename=tryreact_es6_module1
-<hr>
+### import file, export file: use another file's code: https://www.w3schools.com/react/tryit.asp?filename=tryreact_es6_module1
+for more: https://developer.mozilla.org/en-US/docs/web/javascript/reference/statements/export
+<br><br><hr>
 
 #### node packages documentation: https://www.npmjs.com/package/date-format
 #### '$npm help': show alo the command that i can use.
