@@ -39,7 +39,61 @@ $ npm start
 <hr><br>
  
 # Start coding inside the src folder: 
-### 1. App.js->
-```
+# component : 1. function component 2. class component
+<img src="picS/functional and class component.JPG" alt="peng ting" width="500" height="60%">
+ <br><br>
 
+## 1. function component <hr>
+
+
+### 1. App.js-> contains App component-> export default App.
+### 2. index.js-> contains Randering info. used ReactDOM to render on html.
 ```
+// structure of ReactDOM:
+ReactDOM.render(React or JSX component, HTML component);
+//example:
+ReactDOM.render(<App />,  document.getElementById('root'));
+```
+### 3. Example of a simple component:
+```
+/// example of a component:
+function App() {          // a react component
+  return (                // JSX code
+    <div className="App">
+      <h1>Hello</h1>
+    </div>
+  );                      // JSX code
+}                         // a react component end
+
+export default App;       // exporting the component
+```
+### 4. Now example of 2 components passing togather: App.js->
+#### note: one react component contains only one root elemnt. but we can pass other element by calling function inside the element.
+```
+function App() {          // a react component
+  return (                // JSX code
+    <div className="App">
+      <h1>Hello</h1>
+      <Person />          {/*+ taking the 2nd compnent to pass */}
+    </div>
+  );                      // JSX code
+}                         // a react component end
+
+function Person() {          // a react component
+  return (                // JSX code
+    <div className="App">
+      <h1>I am a person from 2nd element</h1>
+    </div>
+  );  
+
+export default App;  contains both components
+```
+### 5. as App contains both the componenta togater. inside index.js, only one 'App'  rendering is enough.
+```
+import App from './App';
+ReactDOM.render(<App />,  document.getElementById('root'));
+```
+ <br> 
+
+## 2. class component <hr>
+<img src="picS/class component vs functional component.JPG" alt="peng ting" width="500" height="60%">
