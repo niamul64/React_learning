@@ -97,3 +97,10 @@ ReactDOM.render(<App />,  document.getElementById('root'));
 
 ## 2. class component <hr>
 <img src="picS/class component vs functional component.JPG" alt="peng ting" width="500" height="60%">
+
+<br><br>
+<hr>
+
+# Dynamic component: pass value to the component and show/render to HTML:
+<img src="picS/dynamic component.JPG" alt="peng ting" width="500" height="60%">
+
