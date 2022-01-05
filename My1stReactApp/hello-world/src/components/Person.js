@@ -1,11 +1,29 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-function Person(obj) {          // a react component
-      return (                // JSX code
-            <div className="App">
-                  <h1>I am {obj.name}, {obj.children} </h1>
-            </div>
-      );                      // JSX code
+class Person extends Component {
+      constructor(props) { // need to use props
+            super(props);
+      }
+      render() {
+            console.log(this.props);
+            return (
+                  <div className="App">
+                        <h1>I am {this.props.name}, {this.props.children} </h1>
+                  </div>
+            );
+
+      }
 }
+export default Person;
 
-export default Person;  
+
+
+
+// function Person(props) {
+//       return (
+//             <div className="App">
+//                   <h1>I am {props.name}, {props.children} </h1>
+//             </div>
+//       );                      // JSX code
+// }
+

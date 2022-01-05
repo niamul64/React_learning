@@ -96,11 +96,60 @@ ReactDOM.render(<App />,  document.getElementById('root'));
  <br> 
 
 ## 2. class component <hr>
-<img src="picS/class component vs functional component.JPG" alt="peng ting" width="500" height="60%">
+```
+// must import: Component.
+import React, { Component } from 'react';
+```
+<img src="picS/class component vs functional component.JPG" alt="peng ting" width="70%" >
 
 <br><br>
 <hr>
 
 # Dynamic component: pass value to the component and show/render to HTML:
-<img src="picS/dynamic component.JPG" alt="peng ting" width="500" height="60%">
 
+## 1. Function based dynamic component
+<img src="picS/dynamic component.JPG" alt="peng ting" width="90%" >
+
+## 2. Class based dynamic component
+### if we are only displaying the component then using constructor is not mendatory. However we must use 'this' key word.
+<img src="picS/class based dynamic component.JPG" alt="peng ting" width="90%" >
+<br><br>
+<hr>
+
+# write another component: book writer and book name display.
+
+```
+// component inside : ./components/Book
+
+import React from 'react';
+
+function Book(props) {
+      return (
+            <div className="App">
+                  <h1>Writer: {props.writer}, Book Name: {props.BookName} </h1>
+            </div>
+      );
+}
+
+export default Book; 
+```
+## App.js->
+```
+import Book from './components/Book';
+
+function App() {          // a react component
+  return (                // JSX code
+    <div className="App">
+      <h1>Book Writer </h1>
+      <Book writer="writer" BookName="jata" />
+    </div>
+  );                      // JSX code
+}                         // a react component end
+
+export default App;  
+```
+# state: class component.
+### Till now, we are passing object from out side now, if the state or information needed to be inside of the same component then we need to use class based components.
+```
+
+```
