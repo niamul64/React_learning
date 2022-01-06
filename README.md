@@ -43,6 +43,7 @@ h. css tyle adding. style sheet, style.css, style object.
 ```
 ## Now, about the hello-world react app-> (Basic features and synatax)
 # see:  https://github.com/niamul64/React_learning/tree/main/My1stReactApp
+<hr><br>
 
 # 2. Topic in '2. component list, 2nd project' project: (advance version of step1)
 see: https://github.com/niamul64/React_learning/tree/main/2.%20component%20list%2C%202nd%20App
@@ -54,3 +55,7 @@ b. Set id to identify each element uniquely.
 c. Click and Delete a item.
 d. Take input and change from state obj parameters (for each obj) 
 ```
+<hr><br>
+
+# 3. Show or hide component list based on tohhle button.
+### render or not render any component list based on toggle button. see: 
