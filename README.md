@@ -29,7 +29,7 @@ $ npm start
 3. Now, a server will be created to run React--> see the browser
 <hr><br>
 
-# 1. Topic in 'hellow world' project: 
+# 1. Topic in 'hellow world' project: (better version at step 2)
 (see video first: https://www.youtube.com/watch?v=gFicda3xgKc)
 ```
 a. Create a react app: 'hello-world'
@@ -44,5 +44,13 @@ h. css tyle adding. style sheet, style.css, style object.
 ## Now, about the hello-world react app-> (Basic features and synatax)
 # see:  https://github.com/niamul64/React_learning/tree/main/My1stReactApp
 
-# 2. Topic in '2. component list, 2nd project' project:
-see 
+# 2. Topic in '2. component list, 2nd project' project: (advance version of step1)
+see: https://github.com/niamul64/React_learning/tree/main/2.%20component%20list%2C%202nd%20App
+
+```
+// everything is more dynamic than step 1 project.
+a. Pass list in stead of raw data. array mapping. (see about mapping: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
+b. Set id to identify each element uniquely.
+c. Click and Delete a item.
+d. Take input and change from state obj parameters (for each obj) 
+```

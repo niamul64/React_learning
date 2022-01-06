@@ -2,71 +2,59 @@ import React, { Component } from 'react';
 import './App.css';
 import Person from './components/Person';
 import Book from './components/Book';
-/////// class based APP
+
 class App extends Component {
   state = {
     books: [
-      { bookName: "1984", writer: "George Orwell" },
-      { bookName: "The Da Vinci Code", writer: "Dan Brown" },
-      { bookName: "The", writer: "george orwell" }
-    ],
-    otherProperty: "i am other property"
+      { id: 1, bookName: "1984", writer: "George Orwell" },
+      { id: 2, bookName: "The Da Vinci Code", writer: "Dan Brown" },
+      { id: 3, bookName: "The1", writer: "george orwell" },
+      { id: 4, bookName: "The2", writer: "george orwell2" }
+    ]
   }
 
-  changeState = (newBook) => { // function to change the state
-    this.setState(
-      {
-        books: [
-          { bookName: newBook, writer: "George Orwell" },
-          { bookName: "The Da Vinci Code", writer: "Dan Brown" },
-          { bookName: "change to", writer: "george orwell" }
-        ]
-      })
-  }
-  onChangeState = (event) => { // function to change the state
-    this.setState(
-      {
-        books: [
-          { bookName: event.target.value, writer: "George Orwell" },
-          { bookName: "The Da Vinci Code", writer: "Dan Brown" },
-          { bookName: "change to", writer: "george orwell" }
-        ]
-      })
-  }
+  deleteElement = (index) => {
+    //const booksList = this.state.books.slice(); // arrow slice()
+    //const booksList= this.state.books.map(item => item); // arrow func
+    const booksList = [...this.state.books];
 
+    booksList.splice(index, 1);
+
+    this.setState({
+      books: booksList
+    });
+  };
+
+  changeName = (event, index) => { // function to change the state
+    const book = { ...this.state.books[index] } // by this, we will get the specific single object
+    book.bookName = event.target.value;         /// changing the value
+    const booksList = [...this.state.books]; // geting the full obj 
+    booksList[index] = book; // changing the one object
+    this.setState({
+      books: booksList
+    })
+
+  }
   render() {
-
     const style = {
       width: "300px",
       margin: "10px auto",
       padding: "10px",
       border: "1px solid",
       borderRadius: "5px",
-      backgroundColor: "green",
-      color: "black"
     }
-
-    return (                // JSX code
+    const bookslist = this.state.books.map((book, index) => {
+      return (
+        <Book key={book.id} bookN={book.bookName} writerOfBook={book.writer}
+          delete={() => this.deleteElement(index)} // passing the index with function reference
+          inputName={(event) => this.changeName(event, index)}
+        />
+      );
+    });
+    return (
       <div className="App">
         <h1 style={style} >Hello</h1>
-        <button onClick={this.changeState.bind(this, "change from APP")}>
-          Chang</button>
-        <input type="text" onChange={this.onChangeState}
-          value={this.state.books[0].bookName} />
-
-        <Book
-          writer={this.state.books[0].bookName}
-          BookName={this.state.books[0].writer}
-          inputText={this.onChangeState} ///////Passing onchange function reference
-        />
-
-        <Book
-          writer={this.state.books[1].bookName}
-          BookName={this.state.books[1].writer} />
-
-        <Book writer={this.state.books[2].bookName}
-          BookName={this.state.books[2].writer}
-          change={() => this.changeState("change from component")} />
+        {bookslist}
       </div>
     );
   }
