@@ -10,7 +10,8 @@ class App extends Component {
       { id: 2, bookName: "The Da Vinci Code", writer: "Dan Brown" },
       { id: 3, bookName: "The1", writer: "george orwell" },
       { id: 4, bookName: "The2", writer: "george orwell2" }
-    ]
+    ],
+    toggle: true
   }
 
   deleteElement = (index) => {
@@ -35,7 +36,14 @@ class App extends Component {
     })
 
   }
+  renderFunc = () => {
+    this.setState({
+      toggle: !this.state.toggle // if true then set false, if false then set true
+    })
+  }
+
   render() {
+
     const style = {
       width: "300px",
       margin: "10px auto",
@@ -43,16 +51,26 @@ class App extends Component {
       border: "1px solid",
       borderRadius: "5px",
     }
-    const bookslist = this.state.books.map((book, index) => {
-      return (
-        <Book key={book.id} bookN={book.bookName} writerOfBook={book.writer}
-          delete={() => this.deleteElement(index)} // passing the index with function reference
-          inputName={(event) => this.changeName(event, index)}
-        />
-      );
-    });
+
+
+    let bookslist = null;
+
+    if (this.state.toggle) {
+      bookslist = this.state.books.map((book, index) => {
+        return (
+          <Book key={book.id} bookN={book.bookName} writerOfBook={book.writer}
+            delete={() => this.deleteElement(index)} // passing the index with function reference
+            inputName={(event) => this.changeName(event, index)}
+          />
+        );
+      });
+
+    }
+
     return (
       <div className="App">
+        <button onClick={this.renderFunc}>Toggle</button>
+
         <h1 style={style} >Hello</h1>
         {bookslist}
       </div>
