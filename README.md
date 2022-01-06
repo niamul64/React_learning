@@ -1,6 +1,5 @@
 ## React_learning: Basic about REACT.js: https://github.com/niamul64/React_learning/tree/main/very%20basic%20about%20react
-# Best video to start with react: https://www.youtube.com/watch?v=gFicda3xgKc
-
+# Best video to start with react: https://www.youtube.com/watch?v=gFicda3xgKc <br>
 ## Ract official doc: https://reactjs.org/docs/create-a-new-react-app.html
 ## React ooficial github repo by facebook: https://github.com/facebook/create-react-app
 <hr>
@@ -28,11 +27,10 @@ $ cd hello-world
 $ npm start 
 ```
 3. Now, a server will be created to run React--> see the browser
-
 <hr><br>
 
 # 1. Topic in 'hellow world' project: 
-(see video first: https://github.com/niamul64/React_learning/tree/main/very%20basic%20about%20react)
+(see video first: https://www.youtube.com/watch?v=gFicda3xgKc)
 ```
 a. Create a react app: 'hello-world'
 b. Basic understanding of a=every folder's and file's work-> src, public, index.html, index.js, App.js, components etc. ReactDOM.render.
@@ -42,8 +40,9 @@ e. export default App, import
 f. 2 components passing togather.
 g. state: class component. change state.
 h. css tyle adding. style sheet, style.css, style object.
-
 ```
 ## Now, about the hello-world react app-> (Basic features and synatax)
 # see:  https://github.com/niamul64/React_learning/tree/main/My1stReactApp
 
+# 2. Topic in '2. component list, 2nd project' project:
+see 
