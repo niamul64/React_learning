@@ -3,7 +3,7 @@ for more: https://developer.mozilla.org/en-US/docs/web/javascript/reference/stat
 <hr>
 
 ### 'hello-world' --> app--> if any one taking this app from github then need to run--> $ npm install --> (to install dependecies)
-## 2. To create a react app we need to make a directory 
+#  To create a react app we need to make a directory 
 ## 1. lets call the directory: My1stReactAapp: open terminal from that directory, Now create React app 'hello-world'
 ```
 $ create-react-app hello-world
@@ -148,8 +148,129 @@ function App() {          // a react component
 
 export default App;  
 ```
-# state: class component.
-### Till now, we are passing object from out side now, if the state or information needed to be inside of the same component then we need to use class based components.
+<br><br><hr>
+
+# state: class component. change state
+### Till now, we been passing object from out side now, if the state or information needed to be inside of the same component then we need to use class based components.
+<br><hr>
+
+### 1. simple example of state:
+<img src="picS/simple example of state.JPG" alt="peng ting" width="90%" >
+<br><hr>
+
+### 2. change state, use function or method to onclick function.
+#### onclick: change the state. use button to change state
+<img src="picS/change the state example.JPG" alt="peng ting" width="90%" >
+<br><hr>
+
+### 3. Pass function to component, Pass function reference to component, and if click that particular component then change the state.
+<img src="picS/passing function reference.JPG" alt="peng ting" width="90%" >
+<br><hr>
+
+### 4. Pass function with parameters to component, Pass function reference with parameters to component, and if click that particular component then change the state. bind parameter with function reference.
+<img src="picS/bind or pass parameter with function reference.JPG" alt="peng ting" width="90%" >
+<br><hr>
+
+### 5. onchage function, onchange event call and change on real time on html page. pass value onchange event.
+
+<img src="picS/onchange exmaple.JPG" alt="peng ting" width="90%" >
+<br><hr>
+
+### 6. onchage function thorugh component, onchange event call and change on real time on html page. pass value onchange event. we can combine the 5,4 steps.  full code is given below:
+
+### // App.js-->
 ```
+import React, { Component } from 'react';
+import './App.css';
+import Person from './components/Person';
+import Book from './components/Book';
+/////// class based APP
+class App extends Component {
+  state = {
+    books: [
+      { bookName: "1984", writer: "George Orwell" },
+      { bookName: "The Da Vinci Code", writer: "Dan Brown" },
+      { bookName: "The", writer: "george orwell" }
+    ],
+    otherProperty: "i am other property"
+  }
+
+  changeState = (newBook) => { // function to change the state
+    this.setState(
+      {
+        books: [
+          { bookName: newBook, writer: "George Orwell" },
+          { bookName: "The Da Vinci Code", writer: "Dan Brown" },
+          { bookName: "change to", writer: "george orwell" }
+        ]
+      })
+  }
+  onChangeState = (event) => { // function to change the state
+    this.setState(
+      {
+        books: [
+          { bookName: event.target.value, writer: "George Orwell" },
+          { bookName: "The Da Vinci Code", writer: "Dan Brown" },
+          { bookName: "change to", writer: "george orwell" }
+        ]
+      })
+  }
+
+  render() {
+
+    return (                // JSX code
+      <div className="App">
+        <h1>Hello</h1>
+        <button onClick={this.changeState.bind(this, "change from APP")}>
+          Chang</button>
+        <input type="text" onChange={this.onChangeState}
+          value={this.state.books[0].bookName} />
+
+        <Book
+          writer={this.state.books[0].bookName}
+          BookName={this.state.books[0].writer}
+          inputText={this.onChangeState} ///////Passing onchange function reference
+        />
+
+        <Book
+          writer={this.state.books[1].bookName}
+          BookName={this.state.books[1].writer} />
+
+        <Book writer={this.state.books[2].bookName}
+          BookName={this.state.books[2].writer}
+          change={() => this.changeState("change from component")} />
+      </div>
+    );
+  }
+}
+export default App;
 
 ```
+### // Book.js--> component
+```
+import React from 'react';
+
+
+let Book = props => {
+      return (
+            <div className="App">
+                  <h1 onClick={props.change} >Writer: {props.writer}, Book Name: {props.BookName} </h1>
+                  <input type="text" onChange={props.inputText} value={props.writer} />
+            </div >
+      );
+}
+
+export default Book; 
+```
+<br><br><hr>
+
+# css tyle adding: 
+### 1. from external file (style sheet, style.css) 2. inside js file, style object
+<hr>
+
+## 1. from external file (style sheet, style.css):
+<img src="picS/style sheet.JPG" alt="peng ting" width="90%" >
+<hr>
+
+## 2. inside js file, style object:
+<img src="picS/css vs js obj.JPG" alt="peng ting" width="90%" >

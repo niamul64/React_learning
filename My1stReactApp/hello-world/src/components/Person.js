@@ -17,13 +17,3 @@ class Person extends Component {
 export default Person;
 
 
-
-
-// function Person(props) {
-//       return (
-//             <div className="App">
-//                   <h1>I am {props.name}, {props.children} </h1>
-//             </div>
-//       );                      // JSX code
-// }
-

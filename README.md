@@ -28,7 +28,22 @@ $ cd hello-world
 $ npm start 
 ```
 3. Now, a server will be created to run React--> see the browser
-<hr>
 
+<hr><br>
+
+# 1. Topic in 'hellow world' project: 
+(see video first: https://github.com/niamul64/React_learning/tree/main/very%20basic%20about%20react)
+```
+a. Create a react app: 'hello-world'
+b. Basic understanding of a=every folder's and file's work-> src, public, index.html, index.js, App.js, components etc. ReactDOM.render.
+c. function components, class based components (import React, { Component } from 'react';)
+d. dynamic components.
+e. export default App, import 
+f. 2 components passing togather.
+g. state: class component. change state.
+h. css tyle adding. style sheet, style.css, style object.
+
+```
 ## Now, about the hello-world react app-> 
 # see:  https://github.com/niamul64/React_learning/tree/main/My1stReactApp
+
