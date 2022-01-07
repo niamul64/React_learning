@@ -42,7 +42,7 @@ g. state: class component. change state.
 h. css tyle adding. style sheet, style.css, style object.
 ```
 ## Now, about the hello-world react app-> (Basic features and synatax)
-# see:  https://github.com/niamul64/React_learning/tree/main/My1stReactApp
+# see:  https://github.com/niamul64/React_learning/tree/main/1.%20My1stReactApp
 <hr><br>
 
 # 2. Topic in '2. component list, 2nd project' project: (advance version of step1)
